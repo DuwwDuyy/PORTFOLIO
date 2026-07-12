@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "blog": "Blog",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "available": "Available for new opportunities",
+    "greeting": "Hi, I'm",
+    "subtitle": "Crafting high-performance digital experiences with a focus on",
+    "viewProjects": "View Projects",
+    "downloadCV": "Download CV",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Me",
+    "description": "I am a highly motivated 4th-year student and fresh graduate with a strong passion for software engineering. With a solid foundation in Computer Science and hands-on experience building modern, scalable applications, I thrive in fast-paced environments where I can learn and contribute to real-world products. I am actively looking for opportunities to kickstart my professional career and make an impact.",
+    "stats": {
+      "projects": "Projects Completed",
+      "experience": "Years Experience",
+      "technologies": "Technologies Mastered",
+      "commits": "GitHub Commits"
+    },
+    "timeline": {
+      "started": "Started University",
+      "startedDesc": "Began my journey in Computer Science.",
+      "learning": "Learning Fundamentals",
+      "learningDesc": "Mastered algorithms and core concepts.",
+      "building": "Building Projects",
+      "buildingDesc": "Created full-stack applications.",
+      "graduating": "Graduating Soon",
+      "graduatingDesc": "Ready for new challenges in the industry."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "skills": {
+    "title": "Technical",
+    "subtitle": "Arsenal",
+    "desc": "A comprehensive overview of my technical expertise, categorized by domain. I continuously explore new technologies to build better solutions.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "ai": "Artificial Intelligence",
+      "tools": "Tools & IDE",
+      "architecture": "Architecture & Patterns"
+    }
+  },
+  "projects": {
+    "headerTitle": "Selected",
+    "headerSubtitle": "Projects",
+    "headerDesc": "A showcase of my finest work. Each project represents a unique challenge solved through elegant engineering and thoughtful design.",
+    "viewCase": "View Case Study",
+    "detail": "Detail",
+    "labels": {
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "result": "Result",
+      "back": "Back to Projects",
+      "liveDemo": "Live Demo",
+      "sourceCode": "Source Code",
+      "toc": "Table of Contents",
+      "problem": "The Problem & Solution",
+      "architecture": "System Architecture",
+      "database": "Database & ERD",
+      "aiIntegration": "AI Integration",
+      "lessons": "Lessons Learned",
+      "architectureDesc": "The application follows a Clean Architecture pattern, decoupling the UI from the business logic and data access layers. This allowed for independent scaling and easier testing of the core algorithms.",
+      "databaseDesc": "Designed a normalized database schema to handle high-volume relational data, utilizing stored procedures and indexes to optimize complex queries.",
+      "coreEntities": "Core Entities",
+      "optimization": "Optimization",
+      "aiDesc": "To provide intelligent insights, I integrated a local LLM (Ollama) which acts as an assistant. Users can type natural language queries and the AI translates it into SQL dynamically.",
+      "lessonsTitle1": "Scalability vs Complexity",
+      "lessonsDesc1": "Learned how to balance the need for microservices with the overhead they introduce. Sometimes a well-structured monolith is the right choice for V1.",
+      "lessonsTitle2": "AI Hallucinations",
+      "lessonsDesc2": "Implementing strict prompt guardrails was necessary to prevent the LLM from generating destructive SQL queries."
+    },
+    "items": {
+      "news-pay-winform": {
+        "title": "NewsPay - Royalty Management System",
+        "role": "Fullstack & AI Integration",
+        "shortDesc": "A comprehensive royalty management application built on .NET Windows Forms, featuring an integrated offline AI for plagiarism detection and a smart accounting assistant.",
+        "challenge": "Integrating an offline LLM to provide secure, internet-free analysis of articles for plagiarism and accounting data extraction without compromising on performance.",
+        "solution": "Used Ollama to run the Qwen2.5 model locally, bridging it with the .NET application to process large text and query the SQL Server database dynamically.",
+        "result": "Provided journalists and accountants with an intelligent tool that automates royalty calculations and strictly protects internal data through 100% offline AI processing."
+      },
+      "editorial-desk-web": {
+        "title": "Editorial Desk Web Platform",
+        "role": "Fullstack Developer",
+        "shortDesc": "A modern web-based solution for editorial offices to manage articles, calculate royalties, and deduct personal income taxes, synchronized with the Winform system.",
+        "challenge": "Ensuring 100% data consistency and business logic alignment with the legacy Winform application while providing a fast, modern responsive web interface.",
+        "solution": "Built a robust Node.js backend to connect to the shared SQL Server and developed a responsive React frontend utilizing Chart.js for real-time multidimensional data visualization.",
+        "result": "Streamlined the 5-step editorial approval process and enabled real-time dashboard analytics for quick financial insights across the organization."
+      },
+      "flower-shop-mvc": {
+        "title": "FLOWERSHOP (PHP MVC)",
+        "role": "Fullstack Developer",
+        "shortDesc": "A fully functional e-commerce platform for selling flowers, built from scratch using pure PHP, MVC architecture, and .htaccess routing.",
+        "challenge": "Implementing full e-commerce capabilities and an Admin CRUD dashboard without relying on modern heavy frameworks.",
+        "solution": "Architected a custom MVC pattern with strict PDO MySQL bindings to prevent SQL injection, and optimized .htaccess for clean routing.",
+        "result": "Delivered a lightweight system with complete features: login/register, product management, cart, checkout, order management, and statistics."
+      }
+    }
+  },
+  "contact": {
+    "headerTitle": "Let's",
+    "headerHighlight": "Connect",
+    "headerDesc": "Have a project in mind or looking for an engineer to join your team? Feel free to reach out. I'm always open to discussing new opportunities.",
+    "infoTitle": "Contact Information",
+    "socialTitle": "Social Profiles",
+    "info": {
+      "email": "Email",
+      "location": "Location"
+    },
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Your Email",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project Inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Hello, I'd like to talk about...",
+      "send": "Send Message"
+    }
+  },
+  "journey": {
+    "headerTitle": "My",
+    "headerSubtitle": "Journey",
+    "headerDesc": "A timeline of my professional experience, academic background, and certifications.",
+    "headers": {
+      "experience": "Professional Experience",
+      "education": "Education",
+      "certificates": "Certificates",
+      "achievements": "Achievements"
+    },
+    "experience": {
+      "intern": {
+        "title": "Full-Stack Developer Intern",
+        "org": "Tech Startup",
+        "desc": "Assisted in building web applications and integrating APIs. Gained practical experience with React, Node.js, and database management."
+      },
+      "project": {
+        "title": "Freelance & Capstone Projects",
+        "org": "University & Freelance",
+        "desc": "Developed complex real-world applications including the NewsPay system and Editorial Desk platform, integrating LLMs and MVC architectures."
+      }
+    },
+    "education": {
+      "uni": {
+        "title": "Bachelor's Degree (4th Year)",
+        "org": "University",
+        "desc": "Currently completing my final year in Software Engineering. Gained strong foundations in Data Structures, Algorithms, and System Design."
+      }
+    },
+    "certificates": {
+      "se": "Software Engineering Fundamentals",
+      "web": "Responsive Web Design",
+      "react": "React Development Bootcamp"
+    },
+    "achievements": {
+      "gradProjects": "Successfully built and deployed multiple full-stack graduation projects",
+      "academicStanding": "Consistently maintained high academic standing throughout 4 years",
+      "aiLearning": "Self-taught advanced AI integration techniques using LLMs and Ollama"
+    }
+  }
+}

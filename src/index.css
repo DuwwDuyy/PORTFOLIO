@@ -1,0 +1,56 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: #F9FAFB; /* Gray 50 */
+      --foreground: #09090B; /* Zinc 950 */
+      --primary: #3B82F6; /* Blue 500 */
+      --secondary: #475569; /* Slate 600 */
+      --card: #FFFFFF; /* White */
+      --border: rgba(0, 0, 0, 0.1);
+    }
+
+    .dark {
+      --background: #09090B; /* Zinc 950 */
+      --foreground: #F9FAFB; /* Gray 50 */
+      --primary: #3B82F6; /* Blue 500 */
+      --secondary: #94A3B8; /* Slate 400 */
+      --card: #111827; /* Gray 900 */
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      @apply bg-[var(--background)] text-[var(--foreground)] antialiased selection:bg-primary selection:text-white transition-colors duration-300;
+      font-feature-settings: "rlig" 1, "calt" 1;
+    }
+  }
+
+  @layer utilities {
+    .glass {
+      @apply bg-black/5 dark:bg-white/5 backdrop-blur-lg border border-black/10 dark:border-white/10 shadow-glass;
+    }
+
+    .text-gradient {
+      @apply bg-clip-text text-transparent bg-accent-gradient;
+    }
+  }
+
+  /* Custom Scrollbar for non-Lenis fallback */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }

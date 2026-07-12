@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "about": "Giới Thiệu",
+    "projects": "Dự Án",
+    "experience": "Kinh Nghiệm",
+    "blog": "Bài Viết",
+    "contact": "Liên Hệ",
+    "resume": "Hồ Sơ"
+  },
+  "hero": {
+    "available": "Sẵn sàng đón nhận cơ hội mới",
+    "greeting": "Xin chào, tôi là",
+    "subtitle": "Kiến tạo các trải nghiệm kỹ thuật số hiệu năng cao với trọng tâm vào",
+    "viewProjects": "Xem Dự Án",
+    "downloadCV": "Tải CV",
+    "scroll": "Cuộn"
+  },
+  "about": {
+    "title": "Giới thiệu",
+    "subtitle": "Bản thân",
+    "description": "Tôi là một sinh viên năm 4 đầy nhiệt huyết, sắp tốt nghiệp với niềm đam mê lớn dành cho kỹ thuật phần mềm. Với nền tảng Khoa học Máy tính vững chắc cùng kinh nghiệm thực tế xây dựng các ứng dụng hiện đại, tôi luôn khao khát phát triển trong môi trường làm việc thực tế. Tôi đang tích cực tìm kiếm các cơ hội nghề nghiệp để bắt đầu hành trình của mình và tạo ra những sản phẩm giá trị.",
+    "stats": {
+      "projects": "Dự án hoàn thành",
+      "experience": "Năm kinh nghiệm",
+      "technologies": "Công nghệ thành thạo",
+      "commits": "Đóng góp GitHub"
+    },
+    "timeline": {
+      "started": "Bắt đầu Đại học",
+      "startedDesc": "Bắt đầu hành trình với Công nghệ thông tin.",
+      "learning": "Nắm vững Nền tảng",
+      "learningDesc": "Thành thạo lập trình hướng đối tượng.",
+      "building": "Xây dựng Dự án",
+      "buildingDesc": "Lập trình ứng dụng Full-stack.",
+      "graduating": "Chuẩn bị tốt nghiệp",
+      "graduatingDesc": "Sẵn sàng đón nhận thử thách mới."
+    }
+  },
+  "footer": {
+    "rights": "Bản quyền đã được bảo hộ"
+  },
+  "skills": {
+    "title": "Kho Tàng",
+    "subtitle": "Công Nghệ",
+    "desc": "Tổng quan toàn diện về chuyên môn kỹ thuật của tôi, được phân loại theo từng lĩnh vực. Tôi liên tục tìm hiểu các công nghệ mới để xây dựng các giải pháp tốt hơn.",
+    "categories": {
+      "frontend": "Giao diện (Frontend)",
+      "backend": "Hệ thống (Backend)",
+      "database": "Cơ sở dữ liệu",
+      "ai": "Trí tuệ nhân tạo (AI)",
+      "tools": "Công cụ & Môi trường",
+      "architecture": "Kiến trúc & Giải pháp"
+    }
+  },
+  "projects": {
+    "headerTitle": "Các Dự Án",
+    "headerSubtitle": "Tiêu Biểu",
+    "headerDesc": "Dưới đây là các dự án tôi đã thực hiện. Mỗi dự án đều là một giải pháp hoàn chỉnh giải quyết các vấn đề thực tế.",
+    "viewCase": "Xem chi tiết",
+    "detail": "Chi tiết",
+    "labels": {
+      "challenge": "Thử thách",
+      "solution": "Giải pháp",
+      "result": "Kết quả",
+      "back": "Quay lại Dự án",
+      "liveDemo": "Xem Trực Tiếp",
+      "sourceCode": "Mã Nguồn",
+      "toc": "Mục lục",
+      "problem": "Vấn đề & Giải pháp",
+      "architecture": "Kiến trúc Hệ thống",
+      "database": "Cơ sở dữ liệu",
+      "aiIntegration": "Tích hợp AI",
+      "lessons": "Bài học Kinh nghiệm",
+      "architectureDesc": "Ứng dụng tuân theo mô hình Kiến trúc Sạch (Clean Architecture), tách biệt giao diện người dùng khỏi logic nghiệp vụ và tầng truy cập dữ liệu. Điều này cho phép mở rộng độc lập và dễ dàng kiểm thử các thuật toán cốt lõi.",
+      "databaseDesc": "Thiết kế lược đồ cơ sở dữ liệu chuẩn hóa để xử lý dữ liệu quan hệ khối lượng lớn, sử dụng các thủ tục lưu trữ (stored procedures) và chỉ mục (indexes) để tối ưu hóa các truy vấn phức tạp.",
+      "coreEntities": "Thực thể Cốt lõi",
+      "optimization": "Tối ưu hóa",
+      "aiDesc": "Tích hợp LLM cục bộ (Ollama) đóng vai trò như một trợ lý. Người dùng có thể nhập các truy vấn bằng ngôn ngữ tự nhiên và AI sẽ dịch sang SQL một cách linh hoạt.",
+      "lessonsTitle1": "Khả năng mở rộng vs Độ phức tạp",
+      "lessonsDesc1": "Học cách cân bằng giữa nhu cầu sử dụng microservices và chi phí phát sinh. Đôi khi một kiến trúc monolithic được cấu trúc tốt lại là lựa chọn đúng đắn cho phiên bản V1.",
+      "lessonsTitle2": "Ảo giác AI (Hallucinations)",
+      "lessonsDesc2": "Việc áp dụng các rào chắn (guardrails) nghiêm ngặt cho prompt là cần thiết để ngăn chặn LLM tạo ra các truy vấn SQL phá hoại."
+    },
+    "items": {
+      "news-pay-winform": {
+        "title": "NewsPay - Hệ thống Quản lý Nhuận bút",
+        "role": "Fullstack & Tích hợp AI",
+        "shortDesc": "Hệ thống quản lý nhuận bút toàn diện xây dựng trên nền tảng .NET Windows Forms, tích hợp AI offline để kiểm tra trùng lặp và trợ lý kế toán thông minh.",
+        "challenge": "Tích hợp mô hình ngôn ngữ lớn (LLM) offline để xử lý dữ liệu và kiểm tra đạo văn an toàn tuyệt đối mà không cần kết nối internet.",
+        "solution": "Sử dụng Ollama để chạy mô hình Qwen2.5 cục bộ, kết nối với ứng dụng .NET để truy vấn dữ liệu SQL Server tự động bằng ngôn ngữ tự nhiên.",
+        "result": "Cung cấp cho các nhà báo và kế toán công cụ tính toán tự động và bảo mật thông tin nội bộ 100% nhờ xử lý AI hoàn toàn cục bộ."
+      },
+      "editorial-desk-web": {
+        "title": "Tòa soạn Điện tử Web",
+        "role": "Lập trình viên Fullstack",
+        "shortDesc": "Nền tảng web hiện đại quản lý bài viết, tính nhuận bút và khấu trừ thuế TNCN, đồng bộ dữ liệu trực tiếp với hệ thống Winform.",
+        "challenge": "Đảm bảo tính nhất quán dữ liệu 100% và logic tính toán với ứng dụng Winform kế thừa đồng thời cung cấp giao diện web mượt mà, responsive.",
+        "solution": "Xây dựng hệ thống Node.js API kết nối cơ sở dữ liệu SQL Server dùng chung và phát triển giao diện React.js sử dụng Chart.js trực quan hoá dữ liệu tài chính.",
+        "result": "Tối ưu hóa quy trình kiểm duyệt bài viết 5 bước và hiển thị báo cáo tài chính trực quan theo thời gian thực cho doanh nghiệp."
+      },
+      "flower-shop-mvc": {
+        "title": "FLOWERSHOP (PHP MVC)",
+        "role": "Lập trình viên Fullstack",
+        "shortDesc": "Trang web thương mại điện tử bán hoa tươi trực tuyến hoàn chỉnh được viết bằng PHP thuần theo kiến trúc MVC, hỗ trợ .htaccess routing.",
+        "challenge": "Phát triển đầy đủ các chức năng e-commerce và bảng điều khiển quản trị (Admin CRUD) mà không dùng framework nặng.",
+        "solution": "Thiết kế mô hình MVC tuỳ chỉnh, sử dụng kết nối PDO MySQL an toàn chống SQL Injection và tối ưu cấu hình .htaccess.",
+        "result": "Hệ thống nhẹ, hiệu năng cao với đầy đủ tính năng: đăng nhập/đăng ký, quản lý sản phẩm, giỏ hàng, thanh toán (checkout), quản lý đơn hàng và thống kê."
+      }
+    }
+  },
+  "contact": {
+    "headerTitle": "Hãy",
+    "headerHighlight": "Kết Nối",
+    "headerDesc": "Bạn có dự án nào đang ấp ủ hoặc đang tìm kiếm một kỹ sư cho đội ngũ của mình? Đừng ngần ngại liên hệ. Tôi luôn sẵn lòng thảo luận về những cơ hội mới.",
+    "infoTitle": "Thông Tin Liên Hệ",
+    "socialTitle": "Mạng Xã Hội",
+    "info": {
+      "email": "Email",
+      "location": "Vị trí"
+    },
+    "form": {
+      "name": "Tên Của Bạn",
+      "namePlaceholder": "Nguyễn Văn A",
+      "email": "Email Của Bạn",
+      "emailPlaceholder": "nguyenvana@example.com",
+      "subject": "Chủ Đề",
+      "subjectPlaceholder": "Hỏi Về Dự Án",
+      "message": "Tin Nhắn",
+      "messagePlaceholder": "Xin chào, tôi muốn thảo luận về...",
+      "send": "Gửi Tin Nhắn"
+    }
+  },
+  "journey": {
+    "headerTitle": "Hành Trình",
+    "headerSubtitle": "Của Tôi",
+    "headerDesc": "Dòng thời gian ghi dấu quá trình học tập, kinh nghiệm làm việc và các chứng chỉ đạt được.",
+    "headers": {
+      "experience": "Kinh Nghiệm Làm Việc",
+      "education": "Học Vấn",
+      "certificates": "Chứng Chỉ",
+      "achievements": "Thành Tựu"
+    },
+    "experience": {
+      "intern": {
+        "title": "Thực tập sinh Full-Stack Developer",
+        "org": "Tech Startup",
+        "desc": "Hỗ trợ xây dựng ứng dụng web và tích hợp API. Tích lũy kinh nghiệm thực tế với React, Node.js và quản lý cơ sở dữ liệu."
+      },
+      "project": {
+        "title": "Dự án Tự do & Đồ án Tốt nghiệp",
+        "org": "Đại học & Freelance",
+        "desc": "Phát triển các ứng dụng thực tế phức tạp bao gồm hệ thống NewsPay và Tòa soạn điện tử Web, tích hợp LLM cục bộ và kiến trúc MVC."
+      }
+    },
+    "education": {
+      "uni": {
+        "title": "Bằng Cử nhân (Sinh viên năm 4)",
+        "org": "Trường Đại học",
+        "desc": "Đang hoàn thành năm học cuối chuyên ngành Kỹ thuật Phần mềm. Trang bị kiến thức vững chắc về Cấu trúc dữ liệu, Giải thuật và Thiết kế hệ thống."
+      }
+    },
+    "certificates": {
+      "se": "Nền tảng Kỹ thuật Phần mềm",
+      "web": "Thiết kế Web Responsive",
+      "react": "Khóa học Phát triển React"
+    },
+    "achievements": {
+      "gradProjects": "Xây dựng và triển khai thành công nhiều dự án tốt nghiệp full-stack thực tế",
+      "academicStanding": "Duy trì thành tích học tập tốt và ổn định trong suốt 4 năm học đại học",
+      "aiLearning": "Tự nghiên cứu các kỹ thuật tích hợp AI nâng cao sử dụng LLMs cục bộ qua Ollama"
+    }
+  }
+}

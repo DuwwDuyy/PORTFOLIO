@@ -1,1 +1,0 @@
-import{A as e,N as t,j as n}from"./cn-B0w_oHYL.js";import{t as r}from"./Contact-Bdsb24rY.js";var i=t(n(),1),a=e();function o(){return(0,i.useEffect)(()=>{window.scrollTo(0,0)},[]),(0,a.jsx)(`div`,{className:`pt-8 min-h-screen flex flex-col`,children:(0,a.jsx)(`div`,{className:`flex-1`,children:(0,a.jsx)(r,{})})})}export{o as default};

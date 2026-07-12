@@ -1,21 +1,40 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, LayoutGrid, Database, Bot, BrainCircuit } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { PROJECTS_DATA } from "@/data/projects";
+import type { Project } from "@/data/projects";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
-  const project = PROJECTS_DATA.find((p) => p.id === id);
+  const [project, setProject] = useState<Project | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    fetch(`http://localhost:5000/api/projects/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.id) setProject(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to fetch project detail:', err);
+        setLoading(false);
+      });
   }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+      </div>
+    );
+  }
 
   if (!project) {
     return (
@@ -31,7 +50,7 @@ export default function ProjectDetail() {
       <header className="relative pt-32 pb-20 px-6 border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={project.image} 
+            src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`} 
             alt={project.title} 
             className="w-full h-full object-cover opacity-20 blur-sm"
           />
@@ -139,17 +158,17 @@ export default function ProjectDetail() {
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                 <h4 className="font-bold text-white mb-2">{t('projects.labels.coreEntities')}</h4>
                 <ul className="text-secondary text-sm space-y-2 list-disc list-inside">
-                  <li>Users & Roles</li>
-                  <li>Royalty Contracts</li>
-                  <li>Transaction Logs</li>
+                  <li>{t('projects.labels.coreEntitiesList.1')}</li>
+                  <li>{t('projects.labels.coreEntitiesList.2')}</li>
+                  <li>{t('projects.labels.coreEntitiesList.3')}</li>
                 </ul>
               </div>
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                 <h4 className="font-bold text-white mb-2">{t('projects.labels.optimization')}</h4>
                 <ul className="text-secondary text-sm space-y-2 list-disc list-inside">
-                  <li>Clustered Indexes</li>
-                  <li>Query Execution Plans</li>
-                  <li>Data Caching</li>
+                  <li>{t('projects.labels.optimizationList.1')}</li>
+                  <li>{t('projects.labels.optimizationList.2')}</li>
+                  <li>{t('projects.labels.optimizationList.3')}</li>
                 </ul>
               </div>
             </div>
@@ -164,9 +183,9 @@ export default function ProjectDetail() {
                 {t('projects.labels.aiDesc')}
               </p>
               <div className="p-4 bg-black/50 rounded-lg border border-white/10 font-mono text-sm text-green-400">
-                &gt; User: "Analyze royalty trends"<br/>
-                &gt; System: Processing context...<br/>
-                &gt; AI: The trend indicates a 15% increase in digital sales royalties compared to Q2.
+                {t('projects.labels.aiDemo.user')}<br/>
+                {t('projects.labels.aiDemo.system')}<br/>
+                {t('projects.labels.aiDemo.ai')}
               </div>
             </Card>
           </section>

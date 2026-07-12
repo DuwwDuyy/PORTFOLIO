@@ -80,7 +80,22 @@
       "lessonsTitle1": "Khả năng mở rộng vs Độ phức tạp",
       "lessonsDesc1": "Học cách cân bằng giữa nhu cầu sử dụng microservices và chi phí phát sinh. Đôi khi một kiến trúc monolithic được cấu trúc tốt lại là lựa chọn đúng đắn cho phiên bản V1.",
       "lessonsTitle2": "Ảo giác AI (Hallucinations)",
-      "lessonsDesc2": "Việc áp dụng các rào chắn (guardrails) nghiêm ngặt cho prompt là cần thiết để ngăn chặn LLM tạo ra các truy vấn SQL phá hoại."
+      "lessonsDesc2": "Việc áp dụng các rào chắn (guardrails) nghiêm ngặt cho prompt là cần thiết để ngăn chặn LLM tạo ra các truy vấn SQL phá hoại.",
+      "coreEntitiesList": {
+        "1": "Người dùng & Phân quyền",
+        "2": "Hợp đồng Nhuận bút",
+        "3": "Nhật ký Giao dịch"
+      },
+      "optimizationList": {
+        "1": "Chỉ mục theo Cụm (Clustered Indexes)",
+        "2": "Kế hoạch Thực thi Truy vấn",
+        "3": "Bộ nhớ Đệm (Caching)"
+      },
+      "aiDemo": {
+        "user": "> Người dùng: \"Phân tích xu hướng nhuận bút\"",
+        "system": "> Hệ thống: Đang xử lý ngữ cảnh...",
+        "ai": "> AI: Xu hướng cho thấy doanh thu nhuận bút kỹ thuật số tăng 15% so với Quý 2."
+      }
     },
     "items": {
       "news-pay-winform": {
@@ -107,6 +122,38 @@
         "solution": "Thiết kế mô hình MVC tuỳ chỉnh, sử dụng kết nối PDO MySQL an toàn chống SQL Injection và tối ưu cấu hình .htaccess.",
         "result": "Hệ thống nhẹ, hiệu năng cao với đầy đủ tính năng: đăng nhập/đăng ký, quản lý sản phẩm, giỏ hàng, thanh toán (checkout), quản lý đơn hàng và thống kê."
       }
+    }
+  },
+  "blog": {
+    "headerTitle": "Góc Suy Nghĩ &",
+    "headerHighlight": "Bài Viết",
+    "headerDesc": "Tôi viết về kỹ thuật phần mềm, trí tuệ nhân tạo và hành trình xây dựng sản phẩm của mình.",
+    "items": {
+      "integrate-ai-winforms": {
+        "title": "Cách tôi tích hợp AI vào ứng dụng WinForms cũ",
+        "excerpt": "Hiện đại hóa ứng dụng desktop cũ bằng cách nhúng LLM cục bộ sử dụng Ollama, giúp giảm chi phí máy chủ và đảm bảo bảo mật dữ liệu.",
+        "readTime": "Đọc 8 phút"
+      },
+      "sql-server-dashboard": {
+        "title": "Xây dựng Bảng điều khiển thời gian thực với SQL Server",
+        "excerpt": "Khám phá các kỹ thuật tối ưu hóa SQL Server, materialized views và SignalR cho dữ liệu thời gian thực.",
+        "readTime": "Đọc 6 phút"
+      },
+      "using-ollama-locally": {
+        "title": "Hướng dẫn toàn tập về sử dụng Ollama cục bộ",
+        "excerpt": "Hướng dẫn từng bước cách chạy Llama 3 và Mistral trên máy tính cá nhân mà không tốn phí API.",
+        "readTime": "Đọc 10 phút"
+      },
+      "clean-architecture": {
+        "title": "Tại sao Kiến trúc Sạch vẫn quan trọng vào năm 2025",
+        "excerpt": "Phân tích sâu về tách biệt mối quan tâm (separation of concerns), dependency injection và lý do không nên nhồi nhét code vào một controller.",
+        "readTime": "Đọc 12 phút"
+      }
+    },
+    "detail": {
+      "back": "Quay lại",
+      "contentSoon": "Nội dung đầy đủ sắp ra mắt",
+      "contentPlaceholder": "Đây là nội dung giữ chỗ cho bài viết blog chi tiết. Bạn có thể tích hợp trình kết xuất markdown như react-markdown tại đây hoặc lấy nội dung từ CMS bên ngoài."
     }
   },
   "contact": {

@@ -1,14 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Card } from "../ui/Card";
-import { Code2, BookOpen, Brain, Terminal, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "../ui/Button";
+import { Code2, BookOpen, Brain, Terminal, ChevronLeft, ChevronRight, ArrowRight, Download } from "lucide-react";
 import avatar2 from "@/assets/images/avatar2.jpg";
 import avatar3 from "@/assets/images/avatar3.jpg";
+
+const ROLES = [
+  "Full-Stack Development.",
+  "AI & Machine Learning.",
+  "Modern Web Applications.",
+  "Scalable Systems.",
+];
 
 export default function About() {
   const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  // Typing effect rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % ROLES.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const AVATAR_IMAGES = [
     "https://github.com/DuwwDuyy.png",
@@ -47,12 +65,84 @@ export default function About() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            {t('about.title')} <span className="text-secondary">{t('about.subtitle')}</span>
-          </h2>
-          <p className="text-secondary max-w-2xl text-lg">
-            {t('about.description')}
-          </p>
+          {/* Premium Glassmorphism Greeting Card */}
+          <div className="relative p-8 md:p-16 rounded-[3rem] bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 overflow-hidden mb-24 shadow-[0_0_100px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+            {/* Background Glows inside card */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-rose-600/10 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col items-center text-center">
+              {/* Availability Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 mb-10 shadow-lg backdrop-blur-md"
+              >
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                </span>
+                <span className="text-sm font-semibold text-white/90 tracking-wide uppercase">{t('hero.available')}</span>
+              </motion.div>
+
+              {/* Main Headline */}
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-[1.1] text-white">
+                {t('hero.greeting')}{" "}
+                <br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-orange-400 to-rose-500 drop-shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+                  Đức Duy
+                </span>
+              </h1>
+
+              {/* Sub headline with Typing Effect */}
+              <div className="min-h-[80px] mb-12 max-w-3xl mx-auto">
+                <p className="text-lg md:text-2xl font-medium text-white/70 leading-relaxed">
+                  {t('hero.subtitle')}{" "}
+                  <motion.span
+                    key={roleIndex}
+                    initial={{ opacity: 0, y: 15, filter: "blur(8px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    exit={{ opacity: 0, y: -15, filter: "blur(8px)" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="text-white font-bold inline-block md:ml-2 drop-shadow-md"
+                  >
+                    {ROLES[roleIndex]}
+                  </motion.span>
+                </p>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <Link to="/projects">
+                  <Button variant="primary" size="lg" magnetic className="group rounded-full px-8 h-14 text-lg border-none bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-400 hover:to-rose-400 shadow-[0_0_20px_rgba(244,63,94,0.4)] text-white">
+                    <span className="flex items-center gap-2 font-semibold">
+                      {t('hero.viewProjects')}
+                      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Button>
+                </Link>
+
+                <a href="/resume.pdf" target="_blank" rel="noreferrer">
+                  <Button variant="secondary" size="lg" magnetic className="group rounded-full px-8 h-14 text-lg bg-white/5 hover:bg-white/10 border-white/10">
+                    <span className="flex items-center gap-2 font-semibold text-white">
+                      {t('hero.downloadCV')}
+                      <Download className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
+                    </span>
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Original About Heading */}
+          <div className="pt-10">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+              {t('about.title')} <span className="text-secondary">{t('about.subtitle')}</span>
+            </h2>
+            <p className="text-secondary max-w-2xl text-lg">
+              {t('about.description')}
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

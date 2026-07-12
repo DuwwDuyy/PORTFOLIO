@@ -80,7 +80,22 @@
       "lessonsTitle1": "확장성 vs 복잡성",
       "lessonsDesc1": "마이크로서비스에 대한 요구와 그에 따른 오버헤드의 균형을 맞추는 방법을 배웠습니다. 때로는 잘 구조화된 모놀리식 아키텍처가 V1에 적합한 선택입니다.",
       "lessonsTitle2": "AI 환각(Hallucinations)",
-      "lessonsDesc2": "LLM이 파괴적인 SQL 쿼리를 생성하는 것을 방지하려면 엄격한 프롬프트 가드레일을 구현해야 했습니다."
+      "lessonsDesc2": "LLM이 파괴적인 SQL 쿼리를 생성하는 것을 방지하려면 엄격한 프롬프트 가드레일을 구현해야 했습니다.",
+      "coreEntitiesList": {
+        "1": "사용자 및 역할",
+        "2": "원고료 계약",
+        "3": "트랜잭션 로그"
+      },
+      "optimizationList": {
+        "1": "클러스터형 인덱스",
+        "2": "쿼리 실행 계획",
+        "3": "데이터 캐싱"
+      },
+      "aiDemo": {
+        "user": "> 사용자: \"원고료 동향 분석해줘\"",
+        "system": "> 시스템: 컨텍스트 처리 중...",
+        "ai": "> AI: 동향 분석 결과, 2분기 대비 디지털 판매 원고료가 15% 증가했습니다."
+      }
     },
     "items": {
       "news-pay-winform": {
@@ -107,6 +122,38 @@
         "solution": "SQL 인젝션을 방지하기 위해 엄격한 PDO MySQL 바인딩이 적용된 맞춤형 MVC 패턴을 설계하고, 깨끗한 라우팅을 위해 .htaccess를 최적화했습니다.",
         "result": "로그인/회원가입, 제품 관리, 장바구니, 결제, 주문 관리 및 통계와 같은 완벽한 기능을 갖춘 가벼운 시스템을 제공했습니다."
       }
+    }
+  },
+  "blog": {
+    "headerTitle": "나의 생각 &",
+    "headerHighlight": "글쓰기",
+    "headerDesc": "저는 소프트웨어 엔지니어링, 인공지능, 그리고 프로덕트를 구축하는 과정에 대해 글을 씁니다.",
+    "items": {
+      "integrate-ai-winforms": {
+        "title": "레거시 WinForms 앱에 AI를 통합한 방법",
+        "excerpt": "Ollama를 사용하여 로컬 LLM을 내장함으로써 서버 비용을 줄이고 데이터 개인 정보 보호를 보장하여 레거시 데스크톱 애플리케이션을 현대화합니다.",
+        "readTime": "8분 읽기"
+      },
+      "sql-server-dashboard": {
+        "title": "SQL Server로 실시간 대시보드 구축하기",
+        "excerpt": "실시간 데이터 스트리밍을 위한 고급 SQL Server 최적화 기술, 구체화된 뷰 및 SignalR 탐색.",
+        "readTime": "6분 읽기"
+      },
+      "using-ollama-locally": {
+        "title": "로컬에서 Ollama를 사용하는 완벽한 가이드",
+        "excerpt": "API 비용 없이 개인 프로젝트를 위해 로컬에서 Llama 3 및 Mistral을 실행하는 방법에 대한 단계별 가이드.",
+        "readTime": "10분 읽기"
+      },
+      "clean-architecture": {
+        "title": "2025년에도 클린 아키텍처가 여전히 중요한 이유",
+        "excerpt": "관심사의 분리, 의존성 주입, 그리고 모든 것을 하나의 거대한 컨트롤러에 넣는 것이 왜 나쁜 아이디어인지에 대한 심층 분석.",
+        "readTime": "12분 읽기"
+      }
+    },
+    "detail": {
+      "back": "뒤로",
+      "contentSoon": "전체 콘텐츠 제공 예정",
+      "contentPlaceholder": "상세 블로그 기사를 위한 자리 표시자입니다. 여기에 react-markdown과 같은 마크다운 렌더러를 통합하거나 외부 CMS에서 콘텐츠를 가져올 수 있습니다."
     }
   },
   "contact": {

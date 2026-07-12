@@ -1,5 +1,4 @@
 import React, { forwardRef, useRef, useState } from "react";
-import type { ButtonHTMLAttributes } from "react";
 import { motion } from "framer-motion";
 import type { HTMLMotionProps } from "framer-motion";
 import { cn } from "@/utils/cn";

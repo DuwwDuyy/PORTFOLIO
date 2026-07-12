@@ -1,11 +1,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Card } from "../ui/Card";
 import { Badge } from "../ui/Badge";
-import { PROJECTS_DATA } from "@/data/projects";
 import type { Project } from "@/data/projects";
 import { useTranslation } from "react-i18next";
 
@@ -29,7 +28,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             <Card glow className="group relative w-full overflow-hidden p-0 cursor-pointer border-white/10 hover:border-primary/50 transition-colors bg-white/5">
               <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
               <img 
-                src={project.image} 
+                src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`} 
                 alt={project.title} 
                 className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
               />
@@ -122,12 +121,28 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 export default function Projects() {
   const { t } = useTranslation();
   const containerRef = useRef(null);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/projects')
+      .then(res => res.json())
+      .then(data => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to fetch projects:', err);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden" ref={containerRef}>
@@ -154,11 +169,17 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col">
-          {PROJECTS_DATA.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="flex justify-center py-20">
+            <div className="w-8 h-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+          </div>
+        ) : (
+          <div className="flex flex-col">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

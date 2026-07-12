@@ -80,7 +80,22 @@
       "lessonsTitle1": "Scalability vs Complexity",
       "lessonsDesc1": "Learned how to balance the need for microservices with the overhead they introduce. Sometimes a well-structured monolith is the right choice for V1.",
       "lessonsTitle2": "AI Hallucinations",
-      "lessonsDesc2": "Implementing strict prompt guardrails was necessary to prevent the LLM from generating destructive SQL queries."
+      "lessonsDesc2": "Implementing strict prompt guardrails was necessary to prevent the LLM from generating destructive SQL queries.",
+      "coreEntitiesList": {
+        "1": "Users & Roles",
+        "2": "Royalty Contracts",
+        "3": "Transaction Logs"
+      },
+      "optimizationList": {
+        "1": "Clustered Indexes",
+        "2": "Query Execution Plans",
+        "3": "Data Caching"
+      },
+      "aiDemo": {
+        "user": "> User: \"Analyze royalty trends\"",
+        "system": "> System: Processing context...",
+        "ai": "> AI: The trend indicates a 15% increase in digital sales royalties compared to Q2."
+      }
     },
     "items": {
       "news-pay-winform": {
@@ -107,6 +122,38 @@
         "solution": "Architected a custom MVC pattern with strict PDO MySQL bindings to prevent SQL injection, and optimized .htaccess for clean routing.",
         "result": "Delivered a lightweight system with complete features: login/register, product management, cart, checkout, order management, and statistics."
       }
+    }
+  },
+  "blog": {
+    "headerTitle": "Thoughts &",
+    "headerHighlight": "Writings",
+    "headerDesc": "I write about software engineering, artificial intelligence, and my journey of building products.",
+    "items": {
+      "integrate-ai-winforms": {
+        "title": "How I integrated AI into a legacy WinForms App",
+        "excerpt": "Modernizing a legacy desktop application by embedding a local LLM using Ollama, reducing server costs and ensuring data privacy.",
+        "readTime": "8 min read"
+      },
+      "sql-server-dashboard": {
+        "title": "Building Real-time Dashboards with SQL Server",
+        "excerpt": "Exploring advanced SQL Server optimization techniques, materialized views, and SignalR for real-time data streaming.",
+        "readTime": "6 min read"
+      },
+      "using-ollama-locally": {
+        "title": "A Complete Guide to Using Ollama Locally",
+        "excerpt": "Step-by-step guide on how to run Llama 3 and Mistral locally on your machine for personal projects without paying API fees.",
+        "readTime": "10 min read"
+      },
+      "clean-architecture": {
+        "title": "Why Clean Architecture Still Matters in 2025",
+        "excerpt": "A deep dive into separating concerns, dependency injection, and why putting everything in one massive controller is a bad idea.",
+        "readTime": "12 min read"
+      }
+    },
+    "detail": {
+      "back": "Back",
+      "contentSoon": "Full content coming soon",
+      "contentPlaceholder": "This is a placeholder for the detailed blog article. You can integrate a markdown renderer like react-markdown here or fetch the content from an external CMS."
     }
   },
   "contact": {

@@ -1,1 +1,0 @@
-import{a as e}from"./rolldown-runtime-CNC7AqOf.js";import{M as t,N as n}from"./useTranslation-Ct2QHHW8.js";import{t as r}from"./Projects-BF1rCg_K.js";var i=e(n(),1),a=t();function o(){return(0,i.useEffect)(()=>{window.scrollTo(0,0)},[]),(0,a.jsx)(`div`,{className:`pt-8 min-h-screen`,children:(0,a.jsx)(r,{})})}export{o as default};
